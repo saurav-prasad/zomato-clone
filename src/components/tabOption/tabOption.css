@@ -1,0 +1,37 @@
+/* tab container */
+.tabContainer {
+    box-shadow: rgb(232, 232, 232) 0px -0.5px 0px inset;
+}
+
+/* tab wrapper */
+.tabWrapper {
+    display: flex;
+}
+
+/* tab items */
+.tabItem {
+    user-select: none;
+    margin-right: 30px;
+    padding: 10px;
+    padding-bottom: 15px;   
+}
+
+.activeTab {
+    border-bottom: 2px solid #FF7E8B;
+}
+
+/* tab image container */
+.tabImageContainer {
+    border-radius: 100%;
+    padding: 1em;
+    margin-right: 13px;
+}
+
+.tabImg {
+    width: 2rem;
+}
+
+.tabName {
+    font-size: 1.13rem;
+    font-weight: 500;
+}

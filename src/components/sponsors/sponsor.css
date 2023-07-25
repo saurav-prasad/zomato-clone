@@ -1,0 +1,64 @@
+.sponsor {
+    background-color: rgb(255 251 247);
+    padding: 50px 0;
+}
+
+.sponsorImage {
+    width: 16.5em;
+}
+
+.sponsorElements {
+    padding-left: 50px;
+}
+
+.sponsortHeader {
+    color: #1c1c1c;
+    font-weight: 600;
+}
+
+.sponsorFirstPara {
+    font-weight: 300;
+    color: #363636;
+    margin-top: 20px;
+}
+
+/* radio */
+.sponsorRadioContainer {
+    margin-top: 20px;
+}
+
+/* input */
+.sponsorInputSection {
+    margin: 15px 0px;
+}
+
+.sponsorInput {
+    width: 19em;
+    font-weight: 100;
+    padding: 10px 17px;
+    border-radius: 8px;
+    margin-right: 17px;
+    font-size: 1.1rem;
+    outline: none;
+    background: rgb(255, 255, 255);
+    border: 0.1rem solid rgb(207, 207, 207);
+}
+
+.sponsorInputBtn {
+    background-color: rgb(230 82 98);
+    font-weight: 300;
+    padding: 11px 16px;
+}
+
+.sponsorSecondPara {
+    color: rgb(156, 156, 156);
+    font-weight: 100;
+    margin: 15px 0;
+    font-size: 0.94rem;
+}
+
+/* images */
+.footerDownloadImage {
+    margin-right: 22px;
+    width: 8.5em;
+}

@@ -1,0 +1,58 @@
+.maxWidth {
+  max-width: 1100px;
+  margin: 0px auto;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.userSelect {
+  user-select: none;
+}
+
+/* arrows */
+.slick-next:before,
+.slick-prev:before {
+  font-size: 32px;
+  line-height: 1;
+  color: #838383;
+}
+
+.slick-next.slick-disabled:before,
+.slick-prev.slick-disabled:before {
+  opacity: 0;
+}
+
+.upArrow {
+  color: white;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.upArrowBox {
+  color: white;
+  position: sticky;
+  bottom: 27px;
+  left: 95%;
+  padding: 10px;
+  background-color: #ef4f5f;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+}
+
+.upArrowBox:hover {
+  background-color: #da3e4e;
+}
+.Link{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}

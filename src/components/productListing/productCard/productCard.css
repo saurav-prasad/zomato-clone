@@ -1,0 +1,165 @@
+/* card container */
+.cardContainer {
+    background-color: white;
+    padding: 7px;
+    border-radius: 18px;
+    height: fit-content;
+    /* TODO tempo */
+    /* border-color: rgb(232, 232, 232);
+    box-shadow: rgba(28, 28, 28, 0.12) 0px 0.4rem 1.8rem; */
+}
+
+.cardContainer:hover {
+    border-color: rgb(232, 232, 232);
+    box-shadow: rgba(28, 28, 28, 0.12) 0px 0.4rem 1.8rem;
+    box-sizing: border-box;
+    transition: all 250ms ease;
+}
+
+/* card image */
+.cardImageBox {
+    max-width: 100%;
+    width: 100%;
+    height: 15.8em;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: none;
+    opacity: 1;
+    transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
+}
+
+.cardImageOffers {
+    color: white;
+    background-color: #256fef;
+    position: absolute;
+    z-index: 9;
+    font-size: 0.85rem;
+    top: 87%;
+    border-radius: 3px;
+    left: -2px;
+    padding: 0px 7px;
+    font-weight: 500;
+}
+
+/* cardImageGoldOffersBoX */
+.cardImageGoldOffersBox {
+    background: linear-gradient(90deg, rgb(0 0 0) 0%, rgb(12, 14, 17) 25%, rgb(12, 14, 17) 50%, rgba(12, 14, 17, 0.8) 80%, rgba(12, 14, 17, 0) 100%);
+    padding: 2px 50px 2px 14px;
+    line-height: 24px;
+    align-items: center;
+    top: 84%;
+}
+
+.goldImage {
+    width: 1.2em;
+}
+
+.goldOffersText {
+    color: #ffd385;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.goldValue{font-weight: 600;}
+
+/* card details */
+.cardDetail {
+    width: 100%;
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.cardBox {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 3.65px;
+}
+
+/* first sub-box */
+.cardProductName {
+    width: 70%;
+    font-size: 1.13rem;
+    font-weight: 550;
+    color: #1C1C1C;
+    text-overflow: ellipsis;
+}
+
+/* cardProductRatingBox */
+.cardProductRatingBox {
+    padding: 2.5px 4.5px;
+    border-radius: 6px;
+}
+
+.cardRating {
+    font-size: 0.73rem;
+    font-weight: 600;
+    color: white;
+    margin-right: 2px;
+}
+
+.starIcon {
+    color: white;
+}
+
+.star {
+    font-size: 0.75rem !important;
+}
+
+/* second sub-box */
+.cuisineBox {
+    width: 60%;
+}
+
+.cuisine {
+    color: #696969;
+    font-size: 0.92rem;
+    font-weight: 400;
+    text-overflow: ellipsis;
+}
+
+.cfo {
+    color: #696969;
+    font-size: 0.92rem;
+    font-weight: 400;
+}
+
+/* third sub-box */
+.deliveryTime {
+    width: 100%;
+    text-align: end;
+    font-size: 0.82rem;
+    color: #363636;
+    font-weight: 600;
+}
+
+/* bottom line */
+.bottomLine {
+    width: 100%;
+    height: 0.07rem;
+    background-color: rgb(232, 232, 232);
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* bottom container */
+.bottomBox {
+    margin-bottom: 10px;
+}
+
+.bottomImage {
+    width: 2.5em;
+    margin-right: 8px;
+}
+
+.bottomName {
+    color: #828282;
+    font-size: 0.8rem;
+    font-weight: 400;
+}

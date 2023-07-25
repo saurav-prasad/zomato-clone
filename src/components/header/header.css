@@ -1,0 +1,93 @@
+/* Container */
+.headerContainer {
+    justify-content: space-between;
+    height: 72px;
+    margin-bottom: 20px;
+}
+
+/* Logo */
+.headerLogo {
+    width: 126.85px;
+    height: 26.99px;
+}
+
+/* header section */
+.headerSection {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* Search section */
+.searchSection {
+    flex: 1;
+    justify-content: space-between;
+    height: 3.4rem;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
+    border: 1px solid rgb(232, 232, 232);
+    margin-left: 1.35em;
+    width: 100%;
+    padding: 0 6px;
+}
+
+/* location */
+.locationBox {
+    justify-content: space-between;
+    flex: 2.8;
+}
+
+.locationInput {}
+
+/* arrowIcon */
+.arrowIcon {
+    margin-left: 3px;
+}
+
+/* searchbox */
+.line {
+    width: 0rem;
+    height: 1.15rem;
+    border: 0.05rem solid rgb(207, 207, 207);
+    margin-right: 10px;
+    margin-left: 2px;
+}
+
+/* Inputbox */
+.inputBox {
+    flex: 5;
+    height: 95%;
+    /* height: 3em; */
+}
+
+.searchInput {
+    padding-left: 9px;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: 0.9rem;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+    color: #464646;
+    text-overflow: ellipsis;
+}
+
+/* login signup section */
+.headerLogin {
+    margin-left: 5em;
+}
+
+.loginBox {
+    margin-left: 15px;
+}
+
+.loginPara {
+    padding: 5px 9px;
+    font-size: 1.18rem;
+    color: #838383;
+    font-weight: 400;
+}
+
+.signupBox {}

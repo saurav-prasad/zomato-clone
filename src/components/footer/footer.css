@@ -1,0 +1,68 @@
+.footer {
+    background-color: #f8f8f8;
+}
+
+.footerContainer {
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+/* first footer */
+.firstFooter {
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footerLogo {
+    width: 8em;
+}
+
+/* footer button box */
+.footerButtonBox {
+    margin-left: 20px;
+    padding: 7px 10px;
+    border: 1px solid rgb(181, 181, 181);
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    font-weight: 500;
+}
+
+.footerButtonBoxImage {
+    width: 1.1em;
+    margin-right: 7px;
+    font-size: 1.4rem !important;
+}
+
+.footerButtonBoxArrow {
+    font-size: 1.1rem !important;
+    margin-left: 4px;
+}
+
+/* bottom footer */
+.footerRow{
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.bottomFooterName {
+    font-size: 0.95rem;
+    font-weight: 600;
+    width: max-content;
+    padding-top: 10px;
+}
+
+.bottomFooterNameList {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 7px !important;
+    color: #696969;
+    width: max-content;
+}
+.footerDownloadImage{
+    width: 9.5em;
+    margin: 3px 0;
+}
+.footerText {
+    font-size: 0.82rem;
+    color: #4f4f4f;
+
+}

@@ -1,0 +1,32 @@
+.category {
+    padding: 35px 0;
+    justify-content: space-between;
+}
+
+.categoryCard {
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.categoryCard:hover {
+    transform: scale(1.05);
+
+}
+
+.categoryImage {
+    border-radius: 15px 15px 0px 0px;
+
+    height: 10em;
+    object-fit: cover;
+}
+
+.categoryTitle {user-select: none;
+    font-weight: 600;
+    color: #363636;
+}
+
+.categoryText { user-select: none;   font-weight: 400;
+    color: #4f4f4f;}

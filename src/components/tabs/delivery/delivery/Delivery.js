@@ -42,7 +42,7 @@ function Delivery() {
   productList = deliveryFilter ? productList.sort((x, y) => {
     const xa = x?.order?.deliveryTime.replace(" min", "")
     const ya = y?.order?.deliveryTime.replace(" min", "")
-    return Number(ya) - Number(xa)
+    return Number(xa) - Number(ya)
   }) : productList
 
   const delivery = (state) => {

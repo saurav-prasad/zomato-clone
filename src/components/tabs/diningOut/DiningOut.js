@@ -8,6 +8,7 @@ import db from '../../../firebase'
 
 
 function DiningOut() {
+
   const [NewData, setNewData] = useState([])
   useEffect(() => {
     const fetchData = async () => {
@@ -22,11 +23,16 @@ function DiningOut() {
   }, [])
 
   // filter by rating
-  const rating = (filter) => {
-    setNewData(NewData.filter((data) => {
-      const b = data?.info?.rating?.rating_text
-      return Number(b) > filter
-    }))
+  const [ratingFilter, setratingFilter] = useState(0)
+
+  let productList = NewData.filter((data) => {
+    const b = data?.info?.rating?.rating_text
+    return Number(b) > ratingFilter
+  })
+
+  const rating = (filterValue) => {
+    console.log(productList);
+    setratingFilter(filterValue)
   }
 
   return (

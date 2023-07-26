@@ -22,21 +22,31 @@ function Delivery() {
     }
     fetchData()
   }, [])
-  
+
   // filter by rating
-  const rating = (filter) => {
-    setNewData(NewData.filter((data) => {
-      const b = data?.info?.rating?.rating_text
-      return Number(b) > filter
-    }))
+  const [ratingFilter, setratingFilter] = useState(0)
+
+  let productList = NewData.filter((data) => {
+    const b = data?.info?.rating?.rating_text
+    return Number(b) > ratingFilter
+  })
+
+  const rating = (filterValue) => {
+    console.log(productList);
+    setratingFilter(filterValue)
   }
+
   // filter by delivery time
-  const delivery = () => {
-    setNewData(NewData.sort((x, y) => {
-      const xa = x?.order?.deliveryTime.replace(" min", "")
-      const ya = y?.order?.deliveryTime.replace(" min", "")
-      return Number(ya) - Number(xa)
-    }))
+  const [deliveryFilter, setdeliveryFilter] = useState(0)
+
+  productList = deliveryFilter ? productList.sort((x, y) => {
+    const xa = x?.order?.deliveryTime.replace(" min", "")
+    const ya = y?.order?.deliveryTime.replace(" min", "")
+    return Number(ya) - Number(xa)
+  }) : productList
+
+  const delivery = (state) => {
+    setdeliveryFilter(state)
   }
 
   return (
@@ -50,7 +60,7 @@ function Delivery() {
         </div>
         <Deliverycollection />
         <Topbrands />
-        <ProductSection productData={NewData} productName='Order food online in Block A, Uttorayon Twp, Siliguri' />
+        <ProductSection productData={productList} productName='Order food online in Block A, Uttorayon Twp, Siliguri' />
       </div>
     </div>
   )

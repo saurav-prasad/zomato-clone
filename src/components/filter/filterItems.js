@@ -14,13 +14,13 @@ export const filterItems = [
       id: 3,
       name: 'Rating: 3.5+',
     },
-    {
-      id: 4,
-      name: 'Cuisines',
-    },
-    {
-      id: 5,
-      name: 'Delivery time',
-    },
+    // {
+    //   id: 4,
+    //   name: 'Cuisines',
+    // },
+    // {
+    //   id: 5,
+    //   name: 'Delivery time',
+    // },
   ]
   

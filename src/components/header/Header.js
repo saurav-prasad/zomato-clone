@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './header.css'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SearchIcon from '@mui/icons-material/Search';
@@ -8,7 +8,7 @@ import { useLoginState } from '../login/loginContext/LoginState';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
-function Header() {
+function Header({ onchange }) {
     const [{ user }, dispatch] = useLoginState()
 
     const login = () => {
@@ -41,11 +41,12 @@ function Header() {
 
     }
     const logOut = () => {
-                dispatch({
-                    type: 'unset_user',
-                    user: null
-                })
+        dispatch({
+            type: 'unset_user',
+            user: null
+        })
     }
+
     return (
         <>
             {/* Container */}
@@ -84,7 +85,7 @@ function Header() {
                                 <div className='flexCenter'>
                                     <img className='loginPara cursorPointer loginImage' src={user.photoURL} />
                                     <p className='loginName cursorPointer'>{user.displayName}</p>
-                                    <LogoutIcon className='logoutBtn cursorPointer'  onClick={logOut} />
+                                    <LogoutIcon className='logoutBtn cursorPointer' onClick={logOut} />
                                 </div>
                                 :
                                 <p className='loginPara cursorPointer' onClick={login}>Sign up</p>

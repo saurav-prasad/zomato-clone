@@ -11,10 +11,10 @@ import { useLocation } from 'react-router-dom'
 
 function Home() {
     const url = useLocation()
-    const [activeTab, setactiveTab] = useState(url.pathname) 
+    const [activeTab, setactiveTab] = useState(url.pathname)
     return (<>
         <div style={{ position: 'relative' }}>
-            <div id='header' ><Header /></div>
+            <div id='header' ><Header  /></div>
             <TabOption activeTab={activeTab} setactiveTab={setactiveTab} />
             {getCorrectScreen(url.pathname)}
             <div className='upArrowBox flexCenter cursorPointer'>
@@ -29,7 +29,7 @@ function Home() {
     )
 }
 
-const getCorrectScreen = (tab) => {
+const getCorrectScreen = (tab,Name) => {
     switch (tab) {
         case "/collections/delivery":
             return <Delivery />

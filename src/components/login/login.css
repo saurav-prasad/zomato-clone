@@ -1,0 +1,58 @@
+.login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    background-color: #e65262;
+    background-image: url('https://1000logos.net/wp-content/uploads/2021/06/Zomato-logo.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 45vw;
+    height: 45vh;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+.loginImg {
+    width: 13vw;
+    margin-bottom: 20px;
+}
+
+.loginHead {
+    font-size: 1.5rem;
+}
+
+.loginBtnBox {
+    cursor: pointer;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #c8c6c6;
+    border-radius: 35px;
+    padding: 7px 20px;
+}
+
+.loginBtnBox:hover {
+    background-color: #fafafa;
+}
+
+.loginBtnBox:active {
+    background-color: #f3f2f2;
+}
+
+.loginGoogleImg {
+    margin-right: 10px;
+    width: 3em;
+}

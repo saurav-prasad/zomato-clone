@@ -90,4 +90,22 @@
     font-weight: 400;
 }
 
-.signupBox {}
+.loginImage {
+    width: 3.2em;
+    border-radius: 50%;
+}
+
+.loginName {
+    font-size: 1.05rem;
+    color: #838383;
+    font-weight: 400;
+    margin: 0;
+}
+
+.logoutBtn {
+    font-size: 1.5rem !important;
+    color: #838383;
+    font-weight: 400;
+    margin: 0;
+    margin-left: 11px;
+}

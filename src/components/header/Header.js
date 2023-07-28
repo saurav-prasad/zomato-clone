@@ -4,8 +4,48 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SearchIcon from '@mui/icons-material/Search';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Link } from 'react-router-dom';
+import { useLoginState } from '../login/loginContext/LoginState';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 function Header() {
+    const [{ user }, dispatch] = useLoginState()
+
+    const login = () => {
+        const auth = getAuth();
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                const userDetail = result.user
+                // The signed-in user info.
+                // const user = result.user;
+                // IdP data available using getAdditionalUserInfo(result)
+                dispatch({
+                    type: 'set_user',
+                    user: userDetail
+                })
+                // ...
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.customData.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                // ...
+            });
+
+    }
+    const logOut = () => {
+                dispatch({
+                    type: 'unset_user',
+                    user: null
+                })
+    }
     return (
         <>
             {/* Container */}
@@ -38,8 +78,18 @@ function Header() {
 
                     {/* login signup section*/}
                     <div className='userSelect headerLogin flexCenter'>
-                        <div className='loginBox flexCenter'><p className='loginPara cursorPointer'>Log in</p></div>
-                        <div className='signupBox loginBox flexCenter'><p className='loginPara cursorPointer'>Sign up</p></div>
+                        {/* <div className='loginBox flexCenter'><p className='loginPara cursorPointer'>Log in</p></div> */}
+                        <div className='signupBox loginBox flexCenter'>
+                            {user ?
+                                <div className='flexCenter'>
+                                    <img className='loginPara cursorPointer loginImage' src={user.photoURL} />
+                                    <p className='loginName cursorPointer'>{user.displayName}</p>
+                                    <LogoutIcon className='logoutBtn cursorPointer'  onClick={logOut} />
+                                </div>
+                                :
+                                <p className='loginPara cursorPointer' onClick={login}>Sign up</p>
+                            }
+                        </div>
                     </div>
                 </div>
             </div >

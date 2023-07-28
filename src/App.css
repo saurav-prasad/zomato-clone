@@ -55,4 +55,6 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
+  color: inherit;
+  font-weight: inherit;
 }

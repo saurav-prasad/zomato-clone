@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { LoginState } from './components/login/loginContext/LoginState';
+import loginReducer, { LoginInitialState } from './components/login/loginContext/LoginReducer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <LoginState reducer={loginReducer} initialState={LoginInitialState}>
+      <App />
+    </LoginState>
   </React.StrictMode>
 );
 

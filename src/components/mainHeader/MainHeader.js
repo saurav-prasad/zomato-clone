@@ -57,11 +57,11 @@ function MainHeader() {
                     <li className='navItems'>   {user ?
                         <div className='flexCenter'>
                             <img className='loginPara cursorPointer loginImage' src={user.photoURL} />
-                            <p style={{color:'white',}} className='loginName cursorPointer'>{user.displayName}</p>
-                            <LogoutIcon style={{color:'white',}} className='logoutBtn cursorPointer' onClick={logOut} />
+                            <p style={{ color: 'white', }} className='loginName cursorPointer'>{user.displayName}</p>
+                            <LogoutIcon style={{ color: 'white', }} className='logoutBtn cursorPointer' onClick={logOut} />
                         </div>
                         :
-                        <span className='cursorPointer' onClick={login}>Sign up</span>
+                        <span className='cursorPointer mainHeaderButton' onClick={login}>Sign up</span>
                     }</li>
                 </ul>
             </div>

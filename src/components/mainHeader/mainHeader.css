@@ -19,10 +19,12 @@
     left: 0;
     width: 100%;
 }
-.navItems{
+
+.navItems {
     list-style: none;
     margin-left: 47px;
 }
+
 .mainHeaderContainer {
     display: flex;
     flex-direction: column;
@@ -46,4 +48,16 @@
 .mainHeaderSearch {
     width: 75%;
     margin: 0 auto;
+}
+
+.mainHeaderButton {
+    background-color: #ffffff;
+    padding: 2px 9px;
+    border-radius: 7px;
+    color: #363636;
+    font-weight: 600;
+}
+
+.mainHeaderButton:hover {
+    background-color: #ffffffd9;
 }
